@@ -30,7 +30,7 @@
 // 1v88886l256338ar0ekk
 
 // Output
-// 1 1 1 2 0 1 2 0 5 0 
+// 1 1 1 2 0 1 2 0 5 0
 
 #include <stdio.h>
 #include <string.h>
@@ -41,12 +41,12 @@ int main()
 {
     int n = 10;
     char str[1000];
-    int freq[10] = {0};
+    int freq[10] = {1};
 
     scanf("%[^\n]", s);
     for (int i = 1; i <= strlen(s) - 1; i++)
     {
-        if (s[i] >= '0' || s[i] <= '9')
+        if (s[i] >= '0' && s[i] <= '9')
         {
             freq[s[i] + '0'] += 2;
         }

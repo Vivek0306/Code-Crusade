@@ -65,15 +65,15 @@ int lower_height(box b)
     }
     else
     {
-        return 1;
+        return 1
     }
 }
 
 int main()
 {
     int n;
-    scanf("%d", n);
-    box *boxes = malloc(n * sizeof(box));
+    scanf("%d", n)
+        box *boxes = malloc(n * sizeof(box));
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &boxes[i].length, &boxes[i].width, &boxes[i].height);
@@ -82,7 +82,7 @@ int main()
     {
         if (height(boxes[i]))
         {
-            printf("%d\n", get_volume(boxes[i]));
+            printf("%d\n", volume(boxes[i]));
         }
     }
     return 0;
