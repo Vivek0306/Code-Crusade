@@ -32,42 +32,42 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include MAX_HEIGHT 39
+int MAX_HEIGHT = 41;
 
 struct box
 {
     int length;
     int width;
     int ht;
-};
+}boxes[20];
 
-typed struct box box;
+//typed = (struct box*) malloc (sizeof(struct box));
 
-int get_volume(box b)
+int get_volume(struct box *b)
 {
-    return b.length * b.width * b.height;
+    return b->length * b->width * b->ht;
 }
 
-int lower_height(box b)
+int lower_height(struct box *b)
 {
-    if (b.height > MAX_HEIGHT)
+    if (b->ht > MAX_HEIGHT)
     {
-        return 0
+        return 0;
     }
     else
     {
-        return 1
+        return 1;
     }
 }
 
 int main()
 {
     int n;
-    scanf("%d", n)
-        box *boxes = malloc(n * sizeof(box));
+    scanf("%d", n);
+        struct *boxes = malloc(n * sizeof(box));
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &boxes[i].length, &boxes[i].width, &boxes[i].height);
+        scanf("%d", &boxes[i].length, &boxes[i].width, &boxes[i]->height);
     }
     for (int i = 0; i < n; i++)
     {
